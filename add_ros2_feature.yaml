@@ -1,0 +1,11 @@
+additions_to_existing:
+  - parent_id: 717941
+    new_children:
+      - type: "Feature"
+        title: "ROS2 / Robotics Interoperability"
+        description: "Enable ROS2 integration with Isaac Sim for navigation, perception, and robot ecosystem components. Separate from core Isaac Sim adapter to avoid coupling framework to ROS2."
+        acceptance_criteria:
+          - "Isaac Sim ROS2 Bridge enabled and configured"
+          - "ROS2 command/telemetry exchange validated"
+          - "ROS2 navigation stack integration where required"
+        features: []

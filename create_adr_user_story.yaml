@@ -1,0 +1,15 @@
+additions_to_existing:
+  - parent_id: 717942
+    new_children:
+      - type: "User Story"
+        title: "Physics engine selection ADR"
+        description: "Evaluate and select the physics engine (Gazebo vs Isaac Sim vs Omniverse) for the simulation environment. Document the decision in an Architecture Decision Record (ADR)."
+        acceptance_criteria:
+          - "ADR document created and merged"
+          - "Integration plan drafted"
+          - "Selection criteria documented"
+        tasks:
+          - title: "Draft physics engine evaluation ADR"
+            description: "Create an ADR documenting the evaluation criteria, options considered, and final decision for the physics engine selection."
+          - title: "Document integration plan"
+            description: "Draft the integration plan for the selected physics engine with the agnostic robotics framework."

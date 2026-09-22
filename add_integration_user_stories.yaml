@@ -1,0 +1,75 @@
+additions_to_existing:
+  - parent_id: 717942
+    new_children:
+      - type: "User Story"
+        title: "Install and validate Isaac Sim environment"
+        description: "Verify Isaac Sim 4.5 installation is functional and reproducible for development. Run compatibility checks and document the working setup."
+        acceptance_criteria:
+          - "Isaac Sim 4.5 runs successfully from /home/marianna/venvs/isaac45"
+          - "Compatibility check passes"
+          - "Developer setup documented"
+        story_points: 3
+        value_area: Architectural
+      - type: "User Story"
+        title: "Establish reproducible Isaac Sim developer setup"
+        description: "Create a reproducible environment setup for Isaac Sim development including dependency management and workspace configuration."
+        acceptance_criteria:
+          - "Environment setup scripted/documented"
+          - "New developer can reproduce in <30 min"
+          - "Dependencies version-locked"
+        story_points: 3
+        value_area: Architectural
+  - parent_id: 717943
+    new_children:
+      - type: "User Story"
+        title: "Define simulation RobotDriver interface requirements"
+        description: "Define the contract/abstraction that any simulator/robot adapter must satisfy for the agnostic framework. Establish RobotCommandPort and RobotState mapping requirements before implementing any concrete adapter."
+        acceptance_criteria:
+          - "RobotDriver port interface documented with required methods"
+          - "Command/state mapping specification complete"
+          - "Acceptance criteria for adapter compliance defined"
+          - "Does not couple framework to Isaac Sim specifics"
+        story_points: 5
+        value_area: Architectural
+      - type: "User Story"
+        title: "Implement Isaac Sim RobotDriver adapter"
+        description: "Implement a RobotDriver adapter that uses Isaac Sim's native Python API to translate framework commands to Isaac Sim actions and publish state back to the framework."
+        acceptance_criteria:
+          - "Adapter implements RobotDriver port interface"
+          - "Framework commands execute in Isaac Sim"
+          - "Robot state (pose, velocity, status) published to Runtime State"
+          - "No framework code depends on Isaac Sim APIs"
+          - "Passes RobotDriver contract suite"
+        story_points: 8
+        value_area: Architectural
+      - type: "User Story"
+        title: "Integrate mission execution with Isaac Sim"
+        description: "Connect the mission execution flow (planner → BT executor → robot operations) to run against Isaac Sim via the adapter, enabling end-to-end scenario execution in simulation."
+        acceptance_criteria:
+          - "Mission planner dispatches to Isaac Sim adapter"
+          - "BT executor ticks actions in Isaac Sim"
+          - "Action progress/results flow back to framework"
+          - "Replan/abort/retry works in simulation"
+        story_points: 8
+        value_area: Architectural
+  - parent_id: 717944
+    new_children:
+      - type: "User Story"
+        title: "Define Isaac Sim scenario definitions (robot + world)"
+        description: "Create representative robot models and world environments in Isaac Sim for validation scenarios. Include robot USD assets, physics properties, and sensor configurations."
+        acceptance_criteria:
+          - "Robot USD model(s) available in Isaac Sim"
+          - "World/environment USD scene created"
+          - "Physics and sensor properties configured"
+          - "Scenario loading scripted/reproducible"
+        story_points: 5
+        value_area: Architectural
+      - type: "User Story"
+        title: "Navigation/perception validation in Isaac Sim"
+        description: "Validate navigation and perception capabilities using Isaac Sim scenarios before physical deployment."
+        acceptance_criteria:
+          - "Navigation scenario executes in Isaac Sim"
+          - "Perception outputs (simulated sensors) validated"
+          - "Results compared against expected behavior"
+        story_points: 5
+        value_area: Architectural

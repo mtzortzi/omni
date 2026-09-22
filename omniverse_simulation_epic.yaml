@@ -1,0 +1,45 @@
+new_epics:
+  - title: "Omniverse & Simulation Infrastructure"
+    description: >
+      Establish NVIDIA Omniverse/Isaac Sim as the primary simulation and validation
+      environment for the agnostic robotics framework. Define and validate integration
+      between the framework and simulated robots, enabling the same mission execution
+      flow to run against both simulated and physical hardware. Define representative
+      robotics scenarios in simulation to validate navigation, perception, mission
+      execution, replanning, and robot abstraction before deployment on physical robots.
+    acceptance_criteria:
+      - "Omniverse/Isaac Sim environment is set up and validated for the framework"
+      - "Integration between the agnostic framework and simulated robots is defined and tested"
+      - "Representative robotics scenarios validate navigation, perception, mission execution, replanning, and robot abstraction in simulation"
+      - "Same mission execution flow runs against both simulated and physical hardware"
+    features:
+      - title: "Omniverse/Isaac Sim Environment Setup"
+        description: >
+          Evaluate NVIDIA Omniverse/Isaac Sim capabilities, existing assets, and
+          integration options with ROS2 and the agnostic robotics framework. Set up
+          the simulation environment as the primary validation platform.
+        acceptance_criteria:
+          - "Omniverse/Isaac Sim capabilities evaluated and documented"
+          - "Existing assets and integration options with ROS2 assessed"
+          - "Simulation environment set up and validated for framework testing"
+      - title: "Framework-Simulation Integration"
+        description: >
+          Define and validate the integration between the agnostic robotics framework
+          and simulated robots in Isaac Sim/Omniverse, enabling the same mission
+          execution flow to run against both simulated and physical hardware.
+        acceptance_criteria:
+          - "Integration architecture defined for framework and Isaac Sim"
+          - "Same mission execution flow runs against simulated and physical robots"
+          - "Integration validated with representative scenarios"
+      - title: "Simulation Scenarios & Framework Validation"
+        description: >
+          Define representative robotics scenarios in simulation to validate navigation,
+          perception, mission execution, replanning, and robot abstraction before
+          deployment on physical hardware.
+        acceptance_criteria:
+          - "Representative robotics scenarios defined in simulation"
+          - "Navigation validated in simulation before physical deployment"
+          - "Perception validated in simulation before physical deployment"
+          - "Mission execution validated in simulation before physical deployment"
+          - "Replanning validated in simulation before physical deployment"
+          - "Robot abstraction validated in simulation before physical deployment"

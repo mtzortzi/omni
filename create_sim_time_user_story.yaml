@@ -1,0 +1,13 @@
+additions_to_existing:
+  - parent_id: 717943
+    new_children:
+      - type: "User Story"
+        title: "Deferred simulation time support"
+        description: "Framework-wide time-control support for simulation scenarios (accelerated, pausable, rewindable time). Activate only when a named simulator consumer requires these capabilities and the required semantics are approved."
+        acceptance_criteria:
+          - "Activation requires a named simulation-time consumer"
+          - "Required progression, pause, rewind, and monotonic semantics documented before implementation"
+          - "Design evaluates reuse of FakeClock before adding a distinct SimClock"
+          - "Completed deterministic Clock Feature #590828 remains closed and unchanged"
+        story_points: 8
+        value_area: Architectural

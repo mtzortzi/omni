@@ -1,0 +1,20 @@
+additions_to_existing:
+  - parent_id: 717943
+    new_children:
+      - type: "User Story"
+        title: "Kinematic fake RobotDriver adapter"
+        description: "Implement a kinematic-fake RobotDriver adapter that simulates robot movement based on kinematic equations. This adapter is usable as the default adapter in bootstrap and passes the RobotDriver contract suite."
+        acceptance_criteria:
+          - "Kinematic-fake adapter implemented under robot_abstraction/adapters/outbound/kinematic_fake/"
+          - "Passes the RobotDriver contract suite"
+          - "Usable as the default adapter in bootstrap"
+          - "Unit tests cover pose after Δt matches integrator"
+  - parent_id: 717944
+    new_children:
+      - type: "User Story"
+        title: "SIL integration test suite"
+        description: "Software-in-the-loop integration tests exercising the E2E slice with each available sim adapter as the driver. Ref docs/17 §Integration and E2E suites. Delivered strictly ports-before-adapters per AGENTS.md."
+        acceptance_criteria:
+          - "Suite tagged 'sil'"
+          - "Runs nightly"
+          - "Tests exercise E2E slice with each available sim adapter"
